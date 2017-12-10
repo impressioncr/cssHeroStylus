@@ -1,0 +1,221 @@
+// **********
+// REQUIREMENTS
+// **********
+
+
+@import nib
+
+// **********
+// VARS
+// **********
+
+
+$phi = 1.618
+
+$golden_major = 0.618
+$golden_minor = 0.382
+
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+$inner = 625
+
+// **********
+// FUNCTIONS
+// **********
+
+
+step($start, $steps, $multiplier = $start, $unit="none")
+	for i in (1..$steps)
+		$start = $start*$multiplier
+	if $unit != "none"
+		unit($start, $unit)
+	else
+		$start
+
+percent($num)
+	unit($num * 100, '%')
+
+rspn-width(NUM)
+	max-width unit( NUM * $px, rem )
+	width 100%
+	margin-left auto
+	margin-right auto
+
+// **********
+//  ELEMENTS 
+// **********
+
+
+*
+	box-sizing border-box
+
+html
+body
+	margin 0
+	padding 0
+	height 100%
+
+html
+	font-family "Open Sans"
+
+a
+	&:link
+	&:hover
+	&:visited
+	&:focus
+		text-decoration none
+
+img
+	max-width 100%
+	height auto
+
+.clearfloats
+	clearfix()	
+
+.headerwrap
+	width 100%
+	border-style solid
+	border-width 3*$px 0 0 0
+
+header
+	.logo
+		float left
+		width 35*$px
+		height 35*$px
+		&:before
+			font-family "FontAwesome"
+			content $fa-var-angle-double-right
+			font-size 45*$px
+			line-height 35*$px
+			font-weight bold
+	h1
+		font-size 35*$px
+		line-height 1em
+		margin 0
+		float left
+		font-weight 800
+
+ul.menu
+	float right
+	margin 0
+	list-style-type none
+	li
+		float left
+		font-size 14*$px
+		margin 0
+		font-weight bold
+	a
+		display block
+		height 100%
+
+.herowrap
+	width 100%
+
+.hero
+	rspn-width($inner)
+	img
+		display block
+		min-width 100%
+
+.middlewrap
+	width 100%
+
+.middle
+	rspn-width($inner)
+
+.middleitem
+	width 33.33333333%
+	float left
+	text-align justify
+	h1
+		font-size 20*$px
+		position relative
+		&:before
+			font-family "FontAwesome"
+			width 1em
+			font-size 25*$px
+			font-weight normal
+			position absolute
+			top 2*$px
+		&.first:before
+			content $fa-var-clock-o
+		&.second:before
+			content $fa-var-arrow-circle-o-down
+		&.third:before
+			content $fa-var-check-circle-o
+
+.mainwrap
+	width 100%
+
+main
+	rspn-width($inner)
+
+.thumb
+	float left
+
+.content
+	float right
+	h1
+		line-height 1em
+		margin 0
+		font-weight normal
+	a
+		&:link
+		&:hover
+		&:visited
+		&:focus
+			text-decoration underline
+
+a.readmore
+	display inline-block
+	font-size 14*$px
+	font-weight bold
+	&:link
+	&:hover
+	&:visited
+	&:focus
+		text-decoration none
+
+.footerwrap
+	width 100%
+
+footer
+	rspn-width($inner)
+	.copyright
+		float left
+		font-size 14*$px
+	ul.social
+		float right
+		margin 0
+		list-style-type none
+		li
+			float left
+			font-size 18*$px
+			margin-left 1em
+			a
+				width 1em
+				height 1em
+				display block
+				overflow hidden
+				i:before
+					width 1em
+					height 1em
+					display block
+					font-style normal
+					text-align center
+					font-family "FontAwesome"
+				i.twitter:before
+					content $fa-var-twitter
+				i.facebook:before
+					content $fa-var-facebook
+				i.instagram:before
+					content $fa-var-instagram
+
+// **********
+// IMPORTS
+// **********
+
+
+@import _layout
+@import _colorscheme

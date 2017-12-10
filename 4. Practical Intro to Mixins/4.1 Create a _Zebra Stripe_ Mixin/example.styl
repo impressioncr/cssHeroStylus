@@ -1,0 +1,43 @@
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+*
+  box-sizing border-box
+
+html
+body
+  margin 0
+  padding 0
+  height 100%
+  min-height 100%
+  font-family "Open Sans"
+  background-color #fff
+
+div
+p
+h4
+blockquote
+  padding 1em
+  margin 0
+
+.divider
+  border-bottom 0.25rem solid #666
+  padding 0
+  margin 2rem 0
+
+zebra(even_color = #eee, odd_color = #ddd, child = '&')
+  {child}:nth-child(odd)
+    background-color odd_color
+  {child}:nth-child(even)
+    background-color even_color
+
+.zebra_divs
+  div
+    zebra(#85ed48, #74cf3e)
+
+.zebra_paragraphs
+  p
+    zebra(#ed4b54, #d0424a)
+
+.zebra_anything
+  zebra(#5e67ed, #515acf, '> ')

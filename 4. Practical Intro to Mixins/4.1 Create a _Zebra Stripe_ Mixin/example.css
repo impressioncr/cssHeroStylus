@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: "Open Sans";
+  background-color: #fff;
+}
+div,
+p,
+h4,
+blockquote {
+  padding: 1em;
+  margin: 0;
+}
+.divider {
+  border-bottom: 0.25rem solid #666;
+  padding: 0;
+  margin: 2rem 0;
+}
+.zebra_divs div:nth-child(odd) {
+  background-color: #74cf3e;
+}
+.zebra_divs div:nth-child(even) {
+  background-color: #85ed48;
+}
+.zebra_paragraphs p:nth-child(odd) {
+  background-color: #d0424a;
+}
+.zebra_paragraphs p:nth-child(even) {
+  background-color: #ed4b54;
+}
+.zebra_anything > :nth-child(odd) {
+  background-color: #515acf;
+}
+.zebra_anything > :nth-child(even) {
+  background-color: #5e67ed;
+}

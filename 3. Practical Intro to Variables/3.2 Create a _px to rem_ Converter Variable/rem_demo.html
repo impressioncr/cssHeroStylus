@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How REMs Work Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="example.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,800,700,300,600" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="rem_demo">
+      <p>The "root" document font-size is 16px</p>
+      <div class="row">
+        <div class="onesixtypx">
+          <h3>160px square</h3>
+          <p>Fixed size</p>
+        </div>
+        <div class="tenrems">
+          <h3>10rem square</h3>
+          <p>10 x root font size<br>= 160px by default
+            (10rem x 16px)
+          </p>
+        </div>
+        <div class="tenems">
+          <h3>10em square</h3>
+          <p>10 x this square's font size so not reliably 160px</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p>The most common default font size is <strong>16px</strong></p>
+      <p>10rem is ten times the 16px root font-size, giving 160px:</p><code>10rem x 16px = 160px</code>
+      <p>So to figure out the rem equivalent to 160px do the calculation in reverse:</p><code>160px / 16px = 10rem</code>
+      <p>To get the rem equivalent for any px value just <br>divide it by the root font size for example:</p><code>32px / 16px = 2rem</code><br><code>50px / 16px = 3.125rem</code><br><code>1px / 16px = 0.0625rem</code>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </body>
+</html>

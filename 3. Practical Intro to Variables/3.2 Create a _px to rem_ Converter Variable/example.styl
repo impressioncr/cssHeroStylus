@@ -1,0 +1,92 @@
+*
+  box-sizing border-box
+
+html, body
+  margin 0
+  padding 0
+  height 100%
+  min-height 100%
+  backgroound #e4e4e4
+
+.rem_demo
+  padding 1rem
+  background-color #fff
+  text-align center
+  max-height 625px
+  margin 0 auto
+
+.row
+  padding 1rem 0 2rem 0
+  display flex
+  flex-grow row wrap
+  justify-content space-around
+  color #fff
+
+.divider
+  border-bottom 0.25rem solid #ccc
+  margin-bottom 2rem
+
+.onesixtypx
+  width 160px
+  height 160px
+
+.tenrems
+  font-size 1.2rem
+  width 10rem
+  height 10rem
+  background-color #9bb329
+
+.tenems
+  font-size 1.2rem
+  width 10rem
+  height 10rem
+  background-color #bf3030
+
+
+$base_font_size = 16
+
+$px = ( 1 / $base_font_size ) rem
+
+.wrapper
+  width 100%
+  background-color #fff
+  border-color #d3d3d3
+  border-style solid
+
+.left
+  float left
+  width 60%
+
+.right
+  float right
+  width 38%
+
+.px
+  max-width 565px
+  margin 25px auto
+  .wrapper
+    padding 25px
+    border-width 1px
+    border-radius 15px
+
+.px:before,
+.px:after
+  content ""
+  display table
+.px:after
+  clear both
+
+.rem
+  max-width 565*$px
+  margin 25*$px auto
+  .wrapper
+    padding 25*$px
+    border-width 1*$px
+    border-radius 15*$px
+
+.rem:before,
+.rem:after
+  content ""
+  display table
+.rem:after
+  clear both

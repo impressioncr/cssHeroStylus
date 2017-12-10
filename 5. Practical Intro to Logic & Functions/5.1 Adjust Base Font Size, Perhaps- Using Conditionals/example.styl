@@ -1,0 +1,54 @@
+
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+$adjust_body_font_size = 1.1
+
+*
+  box-sizing border-box
+
+html
+body
+  margin 0
+  padding 0
+  height 100%
+  min-height 100%
+
+body
+  if $adjust_body_font_size != 1
+    font-size unit($adjust_body_font_size, em)
+  font-family "Open Sans Condensed"
+  background-color #e4e4e4
+
+.wrapper
+  width 100%
+  background-color #fff
+  border-color #d3d3d3
+  border-style solid
+
+.outer
+  max-width 565*$px
+  margin 25*$px auto
+  &:before,
+  &:after
+    content ""
+    display table
+  &:after
+    clear both
+  
+.left
+  float left
+  width 48%
+
+.right
+  float right
+  width 48%
+
+.wrapper
+  padding 25*$px
+  border-width 1*$px
+  border-radius 15*$px
+
+.default_size
+  font-size 16*$px
+  font-family "Open Sans"

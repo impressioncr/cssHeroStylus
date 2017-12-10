@@ -1,0 +1,55 @@
+
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+*
+	box-sizing border-box
+
+html
+body
+	margin 0
+	padding 0
+	height 100%
+	min-height 100%
+	font-family "Open Sans"
+	background-color #e4e4e4
+
+.box
+	width 400*$px
+	height 200*$px
+	margin 50*$px auto
+	text-align center
+	line-height 200*$px
+
+fixed_centered()
+	position absolute
+	top 50%
+	left 50%
+	margin-left (@width / 2) * -1
+	margin-top (@height / 2) * -1
+
+.outerbox
+	background-color #1c1717
+	position relative
+
+.centeredbox
+	background-color #d17a13
+	width 200*$px
+	height 80*$px
+	fixed_centered()
+
+auto_text_color()
+	if dark(@background-color)
+		color lighten(@background-color, 80%)
+	else
+		color darken(@background-color, 80%)
+
+.darkbg
+	display block
+	background-color #263047
+	auto_text_color()
+
+.lightbg
+	display block
+	background-color #acf057
+	auto_text_color()

@@ -1,0 +1,12 @@
+add_border( $val_one, $val_two)
+  border-width ( $val_one + $val_two) px
+
+.mixin_output
+  add_border(10, 5)
+
+add_anything( $val_one, $val_two)
+  $val_one + $val_two
+
+.function_output
+  border-width add_anything(10, 5) px
+  padding add_anything(4, 20) px

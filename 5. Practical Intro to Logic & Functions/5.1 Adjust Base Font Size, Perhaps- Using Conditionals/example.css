@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  font-size: 1.1em;
+  font-family: "Open Sans Condensed";
+  background-color: #e4e4e4;
+}
+.wrapper {
+  width: 100%;
+  background-color: #fff;
+  border-color: #d3d3d3;
+  border-style: solid;
+}
+.outer {
+  max-width: 35.3125rem;
+  margin: 1.5625rem auto;
+}
+.outer:before,
+.outer:after {
+  content: "";
+  display: table;
+}
+.outer:after {
+  clear: both;
+}
+.left {
+  float: left;
+  width: 48%;
+}
+.right {
+  float: right;
+  width: 48%;
+}
+.wrapper {
+  padding: 1.5625rem;
+  border-width: 0.0625rem;
+  border-radius: 0.9375rem;
+}
+.default_size {
+  font-size: 1rem;
+  font-family: "Open Sans";
+}

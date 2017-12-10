@@ -1,0 +1,7 @@
+.mixin_output {
+  border-width: 15px;
+}
+.function_output {
+  border-width: 15px;
+  padding: 24px;
+}

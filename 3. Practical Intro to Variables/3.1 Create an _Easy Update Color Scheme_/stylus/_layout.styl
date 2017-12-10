@@ -1,0 +1,91 @@
+// **********
+// VARS
+// **********
+
+
+$phi = 1.618
+
+$golden_major = 0.618
+$golden_minor = 0.382
+
+$base_font_size = 16
+$px = ( 1 / $base_font_size ) rem
+
+$inner = 625
+
+// **********
+// FUNCTIONS
+// **********
+
+
+step($start, $steps, $multiplier = $start, $unit="none")
+	for i in (1..$steps)
+		$start = $start*$multiplier
+	if $unit != "none"
+		unit($start, $unit)
+	else
+		$start
+
+percent($num)
+	unit($num * 100, '%')
+
+rspn-width(NUM)
+	max-width unit( NUM * $px, rem )
+	width 100%
+	margin-left auto
+	margin-right auto
+
+// **********
+//  ELEMENTS 
+// **********
+
+
+
+header
+	rspn-width($inner)
+	padding unit($phi, rem) unit($golden_major, rem)
+
+ul.menu
+	li
+		margin-left unit( $golden_minor, em )
+		line-height step( 1, 2, $phi, em )
+	a
+		padding 0 1em
+		&:hover
+		&.active
+			border-radius unit($golden_major, em )
+
+.herowrap
+	padding 1rem 0
+
+.hero
+	padding unit($golden_major, rem)
+
+.middle
+	padding 1rem 0
+
+.middleitem
+	padding-left step(1, 2, $phi, rem)
+	padding-right 1rem
+	h1
+		&:before
+			left step(1, 2, $phi, em) * -0.5
+
+article
+	padding step(1, 2, $phi, rem)
+
+.thumb
+	width percent($golden_minor)
+
+.content
+	width percent($golden_major)
+	padding-left step(1, 2, $phi, rem)
+
+a.readmore
+	border-radius unit($golden_major, em )
+	line-height unit($phi, em)
+	padding unit($golden_major, em) unit($phi, em)
+	margin unit($golden_major, em) 0
+
+footer
+	padding unit($phi, rem)
